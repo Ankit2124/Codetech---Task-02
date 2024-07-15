@@ -1,0 +1,219 @@
+These HTML code snippets represent different pages of a simple blog site. Below is a breakdown of each page:
+
+Home Page (index.html)
+Header: Contains a navigation bar with links to Home, Sign Up, and Login pages.
+Main Section: Welcomes visitors to the blog site and indicates that this is the home page.
+Footer: Displays a copyright notice.
+
+Sign Up Page (signup.html)
+Header: Same as the home page.
+Main Section: Contains a sign-up form where users can enter a username and password to register.
+Footer: Same as the home page.
+
+Login Page (login.html)
+Header: Same as the home page.
+Main Section: Contains a login form where users can enter their username and password to log in.
+Footer: Same as the home page.
+
+Dashboard Page (dashboard.html)
+Header: Includes links to Home, Dashboard, and Logout.
+Main Section: Contains a button to create a new post and a section where posts will be listed.
+Footer: Same as the home page.
+
+ Post Page (post.html)
+Header: Same as the dashboard page.
+Main Section: Displays a post title and content, a section for comments, and a form to add a new comment.
+Footer: Same as the home page.
+
+Edit Post Page (edit_post.html)
+Header: Same as the dashboard page.
+Main Section: Contains a form to edit the title and content of an existing post.
+Footer: Same as the home page.
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to the Blog Site</h1>
+        <p>This is the home page.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog Site</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Sign Up</h1>
+        <form action="/signup" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog Site</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Login</h1>
+        <form action="/login" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog Site</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Dashboard</h1>
+        <button onclick="location.href='create_post.html'">Create New Post</button>
+        <section id="posts">
+            <!-- Posts will be listed here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog Site</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Post Title</h1>
+        <p>Post content goes here...</p>
+        <section id="comments">
+            <h2>Comments</h2>
+            <!-- Comments will be listed here -->
+        </section>
+        <form id="commentForm">
+            <label for="comment">Add a comment:</label>
+            <textarea id="comment" name="comment" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog Site</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Edit Post</h1>
+        <form action="/editpost" method="POST">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" required></textarea>
+            <button type="submit">Save Changes</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog Site</p>
+    </footer>
+</body>
+</html>
